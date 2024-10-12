@@ -1,7 +1,7 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const User = require('../models/User');
-const { hashPassword } = require('../misc/hashedPassword');
+import User  from '../models/User.js';
+import { hashPassword } from '../misc/hashedPassword.js';
 
 router.post('/', async (req, res) => {
     const { username, email, password } = req.body;
@@ -24,4 +24,4 @@ router.post('/', async (req, res) => {
     }
 });
 
-module.exports = router;
+export default router;

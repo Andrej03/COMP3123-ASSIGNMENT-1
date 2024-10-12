@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const UserCollectionSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
@@ -9,4 +9,5 @@ const UserCollectionSchema = new mongoose.Schema({
     updated_at: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('User', UserCollectionSchema);
+const User = mongoose.model('User', UserCollectionSchema);
+export default User;

@@ -1,10 +1,11 @@
 {
   "name": "comp3123_assignemnt_1",
   "version": "1.0.0",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\""
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
