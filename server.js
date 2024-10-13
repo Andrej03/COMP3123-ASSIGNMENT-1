@@ -12,14 +12,14 @@ const PORT = 4000;
 app.use(express.json());
 app.use(cors());
 
-// Routes
+// Route connections
 app.use('/api/v1/user/signup', signupRouter);
 app.use('/api/v1/user/login', loginRouter);
 app.use('/api/v1/user', userRouter);
 app.use('/api/v1/emp', employeeRouter);
 
 
-// Connect to database and start server
+// Server start with database connected
 const startServer = async () => {
   try {
     await connectDb();

@@ -12,5 +12,3 @@ const connectDb = async () => {
 };
 
 export default connectDb;
-
-// mongodb://andrejbach05:Z9GOL4CyvSmJHHk8@cluster0-shard-00-00.mongodb.net:27017,cluster0-shard-00-01.mongodb.net:27017,cluster0-shard-00-02.mongodb.net:27017/101417557_comp3123_a1?ssl=true&replicaSet=atlas-xxxx-shard-0&authSource=admin&retryWrites=true&w=majority
