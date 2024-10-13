@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-//import mongoose from 'mongoose';
 import connectDb from './src/database/mongodb.js';
 import userRouter from './src/routes/userRoute.js';
 import employeeRouter from './src/routes/employeeRoute.js';
@@ -19,11 +18,6 @@ app.use('/api/v1/user/login', loginRouter);
 app.use('/api/v1/user', userRouter);
 app.use('/api/v1/emp', employeeRouter);
 
-// Error handling middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something broke!');
-});
 
 // Connect to database and start server
 const startServer = async () => {
