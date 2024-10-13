@@ -22,5 +22,10 @@
 - **package.json**
 - **package-lock.json**
 
+# Starting of node application
+    node server.js
+
 # Cloning of repository
     git clone https://github.com/Andrej03/COMP3123-ASSIGNMENT-1
+
+
