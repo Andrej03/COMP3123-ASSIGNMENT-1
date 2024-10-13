@@ -33,7 +33,7 @@ export const createEmployee = async (req, res) => {
     try {
         const employee = new Employee({ first_name, last_name, email, position, salary, date_of_joining, department });
         await employee.save();
-        res.status(201).json({ message: 'Employee created successfully' });
+        res.status(201).json({ message: 'Employee created successfully', id: employee._id });
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
@@ -42,14 +42,14 @@ export const createEmployee = async (req, res) => {
 // Update an employee
 export const updateEmployee = async (req, res) => {
     const { id } = req.params;
-    const { name, email, department } = req.body;
-    if (!name || !email || !department) {
+    const {position, salary} = req.body;
+    if (!position || !salary) {
         return res.status(400).json({ message: 'All fields are required' });
     }
     try {
         const employee = await Employee.findByIdAndUpdate(
             id,
-            { name, email, department },
+            {  position, salary },
             { new: true }
         );
         if (!employee) {
